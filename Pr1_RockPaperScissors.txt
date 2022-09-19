@@ -1,0 +1,22 @@
+
+puts "Game rock-scissors-paper"
+  arr = [:rock,:scissors,:paper,:exit]
+  loop do
+    computer_choice = arr[rand(0..2)]
+    puts "Press: 0-rock, 1-scissors, 2-paper, 3-exit"
+    number = gets.to_i
+    your_choice = arr[number]
+    if  computer_choice == your_choice
+      puts "Computer chose:#{computer_choice}, You chose:#{your_choice}"
+      puts "Draw"
+    elsif computer_choice == :rock && your_choice == :scissors || computer_choice == :scissors && your_choice == :paper || computer_choice == :paper && your_choice = :rock
+      puts "Computer chose:#{computer_choice}, You chose:#{your_choice}"
+      puts "You lost"
+    elsif your_choice == :exit
+      puts "You have stopped the game"
+      exit
+    else
+     puts "Computer chose:#{computer_choice}, You chose:#{your_choice}"
+      puts "You won!!"
+  end
+  end
